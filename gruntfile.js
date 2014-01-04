@@ -22,12 +22,24 @@ module.exports = function(grunt) {
 					src: ['src/*.js'], 
 					dest: 'build/<%= pkg.name %>.js'
 				}]
+			},
+		},
+		uglify: {
+			options: {
+				banner: banner,
+			},
+			build: {
+				files: { 
+					'build/<%= pkg.name %>.min.js': 
+						['build/<%= pkg.name %>.js'],
+				}
 			}
 		},
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-jshint');
 	grunt.loadNpmTasks('grunt-contrib-concat');
+	grunt.loadNpmTasks('grunt-contrib-uglify');
 
-	grunt.registerTask('default', ['jshint', 'concat']);
+	grunt.registerTask('default', ['jshint', 'concat', 'uglify']);
 };
