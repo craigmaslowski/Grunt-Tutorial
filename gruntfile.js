@@ -11,10 +11,23 @@ module.exports = function(grunt) {
 				maxlen: 80,
 				quotmark: 'single'
 			}
-		}
+		},
+		concat: {
+			options: {
+				separator: ';\n',
+				banner: banner
+			},
+			build: {
+				files: [{
+					src: ['src/*.js'], 
+					dest: 'build/<%= pkg.name %>.js'
+				}]
+			}
+		},
 	});
 
 	grunt.loadNpmTasks('grunt-contrib-jshint');
+	grunt.loadNpmTasks('grunt-contrib-concat');
 
-	grunt.registerTask('default', ['jshint']);
+	grunt.registerTask('default', ['jshint', 'concat']);
 };
