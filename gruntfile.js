@@ -6,11 +6,11 @@ module.exports = function(grunt) {
 	grunt.initConfig({
 		pkg: grunt.file.readJSON('package.json'),
 		jshint: {
-			files: ['gruntfile.js', 'src/*.js'],
 			options: {
 				maxlen: 80,
 				quotmark: 'single'
-			}
+			},
+			files: ['gruntfile.js', 'src/*.js'],
 		},
 		concat: {
 			options: {
@@ -53,7 +53,6 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-simple-mocha');
 
 	grunt.registerTask('development', ['jshint', 'simplemocha']);
-
 	grunt.registerTask('default', 
 		['jshint', 'simplemocha', 'concat', 'uglify']);
 };
