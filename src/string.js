@@ -1,9 +1,11 @@
-function capitalize(a) {
-	var arr = a.split('');
-	arr[0] = arr[0].toUppercase();
-	return arr.join('');
-}
+module.exports = {
+	capitalize: function (a) {
+		var arr = a.split('');
+		arr[0] = arr[0].toUpperCase();
+		return arr.join('');
+	},
 
-function reverse(a) {
-	return a.split('').reverse().join('');
-}
+	reverse: function (a) {
+		return a.split('').reverse().join('');
+	}
+};
