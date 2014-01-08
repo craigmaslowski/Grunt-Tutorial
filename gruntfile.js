@@ -43,7 +43,7 @@ module.exports = function(grunt) {
 				ui: 'bdd',
 				reporter: 'tap'
 			},
-			all: { src: ['tests/*.js'] }
+			all: { src: ['tests/**/*.js'] }
 		}
 	});
 
