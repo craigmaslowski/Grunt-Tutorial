@@ -45,6 +45,12 @@ module.exports = function(grunt) {
 				reporter: 'tap'
 			},
 			all: { src: ['tests/**/*.js'] }
+		},
+		watch: {
+			scripts: {
+				files: ['gruntfile.js', 'src/*.js', 'tests/**/*.js'],
+				tasks: ['development']
+			}
 		}
 	});
 
@@ -52,6 +58,7 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-concat');
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-simple-mocha');
+	grunt.loadNpmTasks('grunt-contrib-watch');
 
 	grunt.registerTask('development', ['jshint', 'simplemocha']);
 	grunt.registerTask('default', 
