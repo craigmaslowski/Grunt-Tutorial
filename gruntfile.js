@@ -43,7 +43,6 @@ module.exports = function(grunt) {
 				ui: 'bdd',
 				reporter: 'tap'
 			},
-
 			all: { src: ['tests/*.js'] }
 		}
 	});
@@ -53,6 +52,8 @@ module.exports = function(grunt) {
 	grunt.loadNpmTasks('grunt-contrib-uglify');
 	grunt.loadNpmTasks('grunt-simple-mocha');
 
+	grunt.registerTask('development', ['jshint', 'simplemocha']);
+
 	grunt.registerTask('default', 
-		['jshint', 'concat', 'uglify', 'simplemocha']);
+		['jshint', 'simplemocha', 'concat', 'uglify']);
 };
