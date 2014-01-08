@@ -10,7 +10,8 @@ module.exports = function(grunt) {
 				maxlen: 80,
 				quotmark: 'single'
 			},
-			files: ['gruntfile.js', 'src/*.js'],
+			dev: ['gruntfile.js', 'tests/*.js'],
+			app:  ['src/**/*.js']
 		},
 		concat: {
 			options: {
