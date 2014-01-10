@@ -1,8 +1,3 @@
-/*
-GruntTutorial 0.1.0- The demo project that accompanies my 'Understanding Grunt' tutorial
-https://github.com/craigmaslowski/Grunt-Tutorial.git
-Built on 2014-01-08
-*/
 module.exports = {
 	add: function (a, b) {
 		return a + b;
@@ -12,7 +7,7 @@ module.exports = {
 		return a - b;
 	}
 };
-;
+
 module.exports = {
 	capitalize: function (a) {
 		var arr = a.split('');

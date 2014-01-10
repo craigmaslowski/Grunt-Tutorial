@@ -1,0 +1,1 @@
+module.exports={add:function(e,r){return e+r},subtract:function(e,r){return e-r}},module.exports={capitalize:function(e){var r=e.split("");return r[0]=r[0].toUpperCase(),r.join("")},reverse:function(e){return e.split("").reverse().join("")}};
